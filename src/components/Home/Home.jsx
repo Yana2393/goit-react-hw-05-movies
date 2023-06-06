@@ -28,7 +28,7 @@ const Home = () => {
                 src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
                 alt={movie.title}
               />
-              <a href="" className={css.listText}>{movie.title}</a>
+              <a href={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} className={css.listText}>{movie.title}</a>
             </li>
           ))}
         </ul>
