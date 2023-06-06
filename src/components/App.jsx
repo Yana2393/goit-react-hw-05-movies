@@ -5,20 +5,9 @@ import css from './App.module.css'
 
 import Home from './Home/Home';
 import FilteredMovies from './FilteredMovies/FilteredMovies';
-import ListMovies from './ListMovies/ListMovies';
+// import ListMovies from './ListMovies/ListMovies';
 
 export const App = () => {
-  const [query, setQuery] = useState('');
-  const [movies, setMovies] = useState([]);
-
-  const onSubmit = query => {
-    if (setQuery === query) {
-      alert('Already shown');
-      return;
-    }
-    setQuery(query);
-    setMovies([]);
-  };
 
   return (
     <div>
@@ -32,7 +21,7 @@ export const App = () => {
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/movies" element={<FilteredMovies onSubmit={onSubmit} />}>
+        <Route path="/movies" element={<FilteredMovies />}>
           {/* <Route path="/movies:query" element={<ListMovies />} /> */}
         </Route>
       </Routes>
