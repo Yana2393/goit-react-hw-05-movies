@@ -1,0 +1,29 @@
+.header {
+  width: 100%;
+  padding: 10px;
+  padding-left: 50px;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.headerTitle {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 22px;
+  text-shadow: 0 1px 0 #b8afaf;
+  margin-right: 10px;
+}
+.headerTitle:hover {
+  text-decoration: underline;
+}
+
+.headerTitle:focus {
+    text-decoration: underline;
+}
