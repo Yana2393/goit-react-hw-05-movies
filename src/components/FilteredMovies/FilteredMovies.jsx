@@ -22,7 +22,7 @@ const FilteredMovies = () => {
         setError(true);
         setLoading(false);
       });
-  }, [query]);
+  }, [query, loading, error]);
 
   useEffect(() => {
     const filtered = movies.filter(movie => movie.title.toLowerCase().includes(query.toLowerCase()));
