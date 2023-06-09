@@ -6,7 +6,6 @@ import css from './MovieDetails.module.css';
 import defaultImg from '../defolt-img/defaultImg.jpeg'
 import { Link, useLocation } from 'react-router-dom';
 import { useRef } from 'react';
-import PropTypes from 'prop-types';
 
 
 const MovieDetails = () => {
@@ -80,8 +79,5 @@ const MovieDetails = () => {
   );
 };
 
-MovieDetails.propTypes = {
-  movieId: PropTypes.string.isRequired,
-}
 
 export default MovieDetails;

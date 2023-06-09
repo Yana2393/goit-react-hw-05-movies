@@ -13,33 +13,12 @@ const FilteredMovies = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-
-
-  useEffect(() => {
-    if (query) {
-      setSearchParams({ query });
-    } else {
-      setSearchParams();
-    }
-  }, [query]);
+  const param = searchParams.get("query") || '';
 
   useEffect(() => {
-    const query = searchParams.get("query");
-    setQuery(query || '');
-    if (query) { 
-      loadMovies(query);
-    } else {
-      setMovies([]);
-    }
-  }, []);
-
-  const handleChange = e => {
-    setQuery(e.target.value);
-  };
-
-  const loadMovies = (q) => {
+    if(!param) return 
     setLoading(true);
-    searchMovies(q)
+    searchMovies(param)
       .then(data => {
         setMovies(data);
         setLoading(false);
@@ -48,14 +27,21 @@ const FilteredMovies = () => {
         setError(true);
         setLoading(false);
       });
-  }
+
+  }, [param])
+
+  const handleChange = e => {
+    setQuery(e.target.value);
+  };
+
+ 
 
   const handleSubmit = e => {
     e.preventDefault();
     if (!query.trim()) {
       return alert('Enter text');
     }
-    loadMovies(query);
+    setSearchParams({ query });
   };
 
   return (

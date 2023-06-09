@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import css from './Home.module.css';
 import { getTrendMovies } from '../services/getMovies';
-import PropTypes from 'prop-types';
 
 
 const Home = () => {
@@ -39,9 +38,5 @@ const Home = () => {
     </div>
   );
 };
-
-Home.propTypes = {
-  movies: PropTypes.arrayOf(PropTypes.object).isRequired,
-}
 
 export default Home;

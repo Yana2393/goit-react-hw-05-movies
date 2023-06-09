@@ -13,7 +13,7 @@ const Cast = () => {
 
   useEffect(() => {
     getMovieCredits(movieId).then(data => setCast(data));
-  }, []);
+  }, [movieId]);
 
   return (
     <div className={css.castWrapp}>
