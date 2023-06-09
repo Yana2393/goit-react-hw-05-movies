@@ -1,0 +1,93 @@
+.movieWrapp {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-left: 40px;
+    align-items: flex-start;
+}
+
+.movie {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    box-shadow: 10px 8px 23px -18px rgba(0, 0, 0, .82);
+}
+
+.movieImg {
+    width: fit-content;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: cover;
+    border-start-end-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+.movieWrappTxt {
+    display: flex;
+    flex-direction: column;
+}
+
+.movieTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    line-height: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+
+.movieSpanTxt {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.movieTxt {
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+.linkWrapp {
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: flex-start;
+    gap: 10px;
+    
+}
+
+.link {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    line-height: 20px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.link:hover {
+    background-color: #333;
+    color: white;
+}
+
+.link:focus {
+    background-color: #333;
+    color: white;
+}

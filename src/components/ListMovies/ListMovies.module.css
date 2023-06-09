@@ -17,12 +17,12 @@
 .listItem {
     display: flex;
     flex-direction: column;
-    width: min-content;
+    width: 20%;
 }
 
 .listImg {
-    width: fit-content;
-    height: auto;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
     aspect-ratio: auto;
     object-fit: cover;
     border-radius: 10px;

@@ -1,7 +1,10 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import css from './Home.module.css';
 import { getTrendMovies } from '../services/getMovies';
+import PropTypes from 'prop-types';
+
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -28,7 +31,7 @@ const Home = () => {
                 src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
                 alt={movie.title}
               />
-              <a href={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} className={css.listText}>{movie.title}</a>
+              <NavLink to={`/movies/${movie.id}`} className={css.listText}>{movie.title}</NavLink>
             </li>
           ))}
         </ul>
@@ -36,5 +39,9 @@ const Home = () => {
     </div>
   );
 };
+
+Home.propTypes = {
+  movies: PropTypes.arrayOf(PropTypes.object).isRequired,
+}
 
 export default Home;
